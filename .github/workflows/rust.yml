@@ -1,0 +1,18 @@
+on: [push]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build_and_test:
+    name: Build & Test CosmWasm smart contract
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      # Steps below only working up to chapter 13 (Migrations),
+      # because using path to remote source code.
+      #- name: Cargo build
+      #  run: cargo build --verbose
+      #- name: Run tests
+      #  run: cargo test --verbose
